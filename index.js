@@ -2,8 +2,12 @@ const express = require("express")
 const app = express();
 const path = require('path')
 const multer = require('multer');
+const cors = require('cors'); // Require the cors package
 const port = 3000;
 
+
+// Configure CORS
+app.use(cors());
 
 const videoStorage = multer.diskStorage({
     //destination to store the video
