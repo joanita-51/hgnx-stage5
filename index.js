@@ -28,7 +28,7 @@ const videoUpload = multer({
         fileSize:10000000
     },
     fileFilter(req,file,cb){
-        if(!file.originalname.match(/\.(mp4|MPEG-4|mkv)$/)){
+        if(!file.originalname.match(/\.(mp4|MPEG-4|mkv|webm)$/)){
             return cb(new Error("please upload a video"))
         }
         cb(undefined,true)
